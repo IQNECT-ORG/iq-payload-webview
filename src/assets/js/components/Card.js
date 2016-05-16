@@ -4,7 +4,7 @@ import _ from 'lodash';
 export default (props) => {
   return (
     <div className="card text-xs-center">
-      <img className="card-img-top" src={props.card.icon} alt="Card image cap"/>
+      <img className="card-img-top img-fluid" src={props.card.icon} alt="Card image cap"/>
       <div className="card-block">
         <h1 className="card-title">
           {props.card.title}
