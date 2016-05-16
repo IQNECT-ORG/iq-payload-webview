@@ -1,0 +1,20 @@
+
+.btn-radius-lg {
+  border-radius: 2rem;
+}
+
+.btn-primary {
+  background-color: #e91e63;
+  border-color: #e91e63;
+  color: #fff;
+  text-transform: uppercase;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &:active:focus,
+  &:active:hover {
+    background-color: #c2185b;
+    border-color: #c2185b;
+  }
+}
