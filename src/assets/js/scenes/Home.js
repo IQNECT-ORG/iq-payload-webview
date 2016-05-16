@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { loadHomeScene } from '../actions';
 import SwipeCardList from '../containers/SwipeCardList';
+import SwipePager from '../containers/SwipePager';
 
 class Home extends Component {
 
@@ -16,6 +17,7 @@ class Home extends Component {
       <div className="scene scene--home container">
         <div className="col-xs-12">
           <SwipeCardList/>
+          <SwipePager/>
         </div>
       </div>
     );
@@ -24,7 +26,6 @@ class Home extends Component {
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    cards: state.cards
   };
 }
 
