@@ -1,7 +1,6 @@
 import { combineReducers } from 'redux';
+import cards from './cards';
 
 export default combineReducers({
-  __r: (state, action) => {
-    return {};
-  }
+  cards
 });
