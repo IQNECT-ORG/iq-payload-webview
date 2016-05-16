@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-prd": "node -e \"require('grunt').tasks(['build-prd']);\""
   },
   "repository": {
     "type": "git",
@@ -52,6 +53,7 @@
     "grunt-contrib-htmlmin": "^1.4.0",
     "grunt-contrib-imagemin": "^1.0.0",
     "grunt-contrib-sass": "^1.0.0",
+    "grunt-webpack": "^1.0.11",
     "imports-loader": "^0.6.5",
     "isparta-loader": "^2.0.0",
     "load-grunt-tasks": "^3.5.0",

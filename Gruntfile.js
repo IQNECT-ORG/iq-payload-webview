@@ -1,6 +1,6 @@
 var webpackConfigs = {
   dev: require('./tools/webpack.dev.config'),
-  //prd: require('./tools/webpack.prd.config')
+  prd: require('./tools/webpack.prd.config')
 };
 
 module.exports = grunt => {
@@ -11,7 +11,7 @@ module.exports = grunt => {
     pkg: grunt.file.readJSON('package.json'),
     webpack: {
       dev: webpackConfigs.dev,
-      //prd: webpackConfigs.prd
+      prd: webpackConfigs.prd
     },
     htmlmin: {
       prd: {
