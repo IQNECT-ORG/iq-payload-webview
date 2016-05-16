@@ -15,7 +15,7 @@ class Home extends Component {
   render() {
     return (
       <div className="scene scene--home container">
-        <div className="col-xs-12">
+        <div className="col-xs-12 m-y-1">
           <SwipeCardList/>
           <SwipePager/>
         </div>
