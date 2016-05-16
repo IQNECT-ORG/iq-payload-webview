@@ -1,0 +1,19 @@
+{
+  "name": "iq-payload-webview",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IQNECT-ORG/iq-payload-webview.git"
+  },
+  "author": "Joshua Thornton",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IQNECT-ORG/iq-payload-webview/issues"
+  },
+  "homepage": "https://github.com/IQNECT-ORG/iq-payload-webview#readme"
+}
