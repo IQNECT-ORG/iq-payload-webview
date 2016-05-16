@@ -1,17 +1,28 @@
 import _ from 'lodash';
 import React from 'react';
 import Card from './Card';
+import ReactSwipe from 'react-swipe';
 
 export default (props) => {
+  if(props.cards.length === 0) {
+    return (
+      <div>Loading...</div>
+    );
+  }
   return (
-    <ul className="card-list">
+    <ReactSwipe className="card-list"
+      swipeOptions={{
+        continuous: false,
+        callback: props.onSwipe
+      }}
+      key={props.cards.length}>
       {_.map(props.cards, (card, index) => {
         return (
-          <li className="card-list__item" key={index}>
+          <div className="card-list__item" key={index}>
             <Card card={card}/>
-          </li>
+          </div>
         );
       })}
-    </ul>
+    </ReactSwipe>
   );
 }

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { loadHomeScene } from '../actions';
-import CardList from '../components/CardList';
+import SwipeCardList from '../containers/SwipeCardList';
 
 class Home extends Component {
 
@@ -15,7 +15,7 @@ class Home extends Component {
     return (
       <div className="scene scene--home container">
         <div className="col-xs-12">
-          <CardList cards={this.props.cards}/>
+          <SwipeCardList/>
         </div>
       </div>
     );
