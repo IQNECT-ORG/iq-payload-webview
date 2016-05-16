@@ -13,7 +13,7 @@ const mapDispatchToProps = (dispatch, ownProps) => {
 
 const render = (props) => {
   return (
-    <div>
+    <div className="app">
       {props.children}
     </div>
   );
