@@ -10,6 +10,9 @@ export const fetchCardsRequest = createAction(FETCH_CARDS_REQUEST);
 export const fetchCardsSuccess = createAction(FETCH_CARDS_SUCCESS);
 export const fetchCardsFailure = createAction(FETCH_CARDS_FAILURE);
 
+export const CARDS_UPDATE = 'CARDS_UPDATE';
+export const cardsUpdate = createAction(CARDS_UPDATE);
+
 export const SWIPE_UPDATE = 'SWIPE_UPDATE';
 export const swipeUpdate = createAction(SWIPE_UPDATE);
 
