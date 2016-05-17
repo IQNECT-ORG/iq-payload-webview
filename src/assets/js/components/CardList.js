@@ -19,7 +19,7 @@ export default (props) => {
       {_.map(props.cards, (card, index) => {
         return (
           <div className="card-list__item" key={index}>
-            <Card card={card}/>
+            <Card card={card} url={props.url}/>
           </div>
         );
       })}

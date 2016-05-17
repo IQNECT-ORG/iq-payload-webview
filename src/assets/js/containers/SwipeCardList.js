@@ -6,7 +6,8 @@ import { swipeUpdate } from '../actions';
 const mapStateToProps = (state, ownProps) => {
   return {
     swipe: state.swipe,
-    cards: state.cards
+    cards: state.cards,
+    url: state.params.url
   };
 }
 

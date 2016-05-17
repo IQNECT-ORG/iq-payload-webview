@@ -6,7 +6,9 @@ import {
 
   fetchCardsRequest,
   fetchCardsSuccess,
-  fetchCardsFailure
+  fetchCardsFailure,
+
+  paramsUpdate
 } from '../actions';
 import * as cardAPIs from '../services/api/cards';
 
@@ -14,6 +16,8 @@ function* loadHomeScene(action) {
   // Shortcut and remove the first character (question mark)
   const queryString = action.payload.queryString.substr(1);
   const queryObject = qs.parse(queryString);
+
+  yield put(paramsUpdate(queryObject));
 
   yield put(fetchCardsRequest(queryObject.url));
   try {

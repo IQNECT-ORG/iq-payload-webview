@@ -1,3 +1,4 @@
+import autotrack from 'autotrack';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { createAppStore, sagaMiddleware } from './store';

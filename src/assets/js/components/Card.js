@@ -24,7 +24,10 @@ export default (props) => {
             <a
               className="btn btn-primary btn-block btn-radius-lg"
               key={index}
-              href={cta.href}>
+              href={cta.href}
+              data-event-action="click"
+              data-event-category={props.url}
+              data-event-label={cta.href}>
               {cta.label}
             </a>
           );

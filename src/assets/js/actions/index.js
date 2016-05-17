@@ -12,3 +12,6 @@ export const fetchCardsFailure = createAction(FETCH_CARDS_FAILURE);
 
 export const SWIPE_UPDATE = 'SWIPE_UPDATE';
 export const swipeUpdate = createAction(SWIPE_UPDATE);
+
+export const PARAMS_UPDATE = 'PARAMS_UPDATE';
+export const paramsUpdate = createAction(PARAMS_UPDATE);
