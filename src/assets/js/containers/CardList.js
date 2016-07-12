@@ -1,12 +1,11 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import Pager from '../components/Pager';
-import { swipeUpdate } from '../actions';
+import CardList from '../components/CardList';
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    pageCount: state.cards.length,
-    activePage: state.swipe.slide
+    cards: state.cards,
+    url: state.params.url
   };
 }
 
@@ -15,7 +14,7 @@ const mapDispatchToProps = (dispatch, ownProps) => {
   };
 }
 
-let DecoratedComponent = Pager;
+let DecoratedComponent = CardList;
 DecoratedComponent = connect(mapStateToProps, mapDispatchToProps)(DecoratedComponent);
 
 export default DecoratedComponent;
