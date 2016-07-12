@@ -13,9 +13,13 @@ class Home extends Component {
 
   render() {
     return (
-      <div className="scene scene--home container">
-        <div className="col-xs-12 m-y-1">
-          <CardList/>
+      <div className="scene scene--home">
+        <div className="container">
+          <div className="row">
+            <div className="col-xs-12 m-y-1">
+              <CardList/>
+            </div>
+          </div>
         </div>
       </div>
     );

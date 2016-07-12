@@ -1,9 +1,29 @@
+.card-img {
+  width: 75px;
+}
+
+.card-block {
+  min-height: 60px;
+}
+
 .card-title {
   text-transform: uppercase;
   font-size: 1rem;
   font-weight: bold;
 }
 
-.card-img-top {
-  margin: 0 auto;
+.card-text {
+  line-height: 10px;
+  color: #263238;
+}
+
+.price {
+  font-weight: bold;
+}
+
+.card-arrow {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
 }

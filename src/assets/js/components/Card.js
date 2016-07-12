@@ -6,33 +6,29 @@ export default (props) => {
   if(props.card.icon == null || props.card.icon.length === 0) {
     image = null;
   } else {
-    image = <img className="card-img-top img-fluid" src={props.card.icon} alt="Card image cap"/>;
+    image = <img className="card-img" src={props.card.icon} alt="Card image cap"/>;
   }
 
+  const action = _.first(props.card.ctas);
+
   return (
-    <div className="card text-xs-center">
-      {image}
-      <div className="card-block">
-        <h1 className="card-title">
-          {props.card.title}
-        </h1>
+    <a
+      className="card clearfix"
+      href={action.href}
+      data-event-action="click"
+      data-event-category={props.url}
+      data-event-label={action.href}>
+      <div className="pull-xs-left">
+        {image}
+      </div>
+      <div className="card-block pull-xs-left">
         <p className="card-text">
           {props.card.description}
+          <br/>
+          {props.card.price}
         </p>
-        {_.map(props.card.ctas, (cta, index) => {
-          return (
-            <a
-              className="btn btn-primary btn-block btn-radius-lg"
-              key={index}
-              href={cta.href}
-              data-event-action="click"
-              data-event-category={props.url}
-              data-event-label={cta.href}>
-              {cta.label}
-            </a>
-          );
-        })}
       </div>
-    </div>
+      <img className="card-arrow" src="/assets/images/arrow.svg"/>
+    </a>
   );
 }
