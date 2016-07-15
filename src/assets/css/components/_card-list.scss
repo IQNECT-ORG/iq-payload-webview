@@ -1,0 +1,8 @@
+.card-list {
+  @extend .list-unstyled;
+  margin: 0 auto;
+
+  > li {
+    @extend .clearfix;
+  }
+}

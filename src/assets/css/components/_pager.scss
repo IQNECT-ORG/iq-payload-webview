@@ -1,0 +1,23 @@
+.caro-pager {
+  @extend .clearfix;
+  @extend .list-unstyled;
+  text-align: center;
+
+  @include element('page') {
+    display: inline-block;
+    margin: 0 10px;
+    > div {
+      border: 2px #fff solid;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: transparent;
+    }
+
+    @include modifier('active') {
+      > div {
+        background-color: #fff;
+      }
+    }
+  }
+}
