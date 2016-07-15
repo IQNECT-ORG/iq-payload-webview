@@ -2,7 +2,7 @@
   @extend .list-unstyled;
   margin: 0 auto;
 
-  > div {
+  > li {
     @extend .clearfix;
   }
 }
