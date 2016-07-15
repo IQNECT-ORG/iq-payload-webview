@@ -1,12 +1,16 @@
-@import "bootstrap";
+@import 'bootstrap';
 
 // Mixins
-@import "mixins/bem";
+@import 'mixins/bem';
+
+// Fonts
+@import 'fonts/index';
 
 // Components
-@import "components/app";
-@import "components/card-list";
-//@import "components/button";
-@import "components/card";
-//@import "components/pager";
-//@import "components/titlebar";
+@import 'components/type';
+@import 'components/app';
+@import 'components/card-list';
+//@import 'components/button';
+@import 'components/card';
+//@import 'components/pager';
+//@import 'components/titlebar';
