@@ -1,6 +1,12 @@
 import React from 'react';
 import _ from 'lodash';
 
+function createMarkup(html) {
+  return {
+    __html: html
+  };
+};
+
 export default (props) => {
   let image;
   if(props.card.icon == null || props.card.icon.length === 0) {
@@ -22,11 +28,9 @@ export default (props) => {
         {image}
       </div>
       <div className="card-block pull-xs-left">
-        <p className="card-text">
-          {props.card.description}
-          <br/>
-          {props.card.price}
-        </p>
+        <p
+          className="card-text"
+          dangerouslySetInnerHTML={createMarkup(props.card.description)}/>
       </div>
       <img className="card-arrow" src="/assets/images/arrow.svg"/>
     </a>
