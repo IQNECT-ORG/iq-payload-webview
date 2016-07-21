@@ -1,3 +1,10 @@
+.card-img-container {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+}
+
 .card-img {
   width: 75px;
 }
@@ -13,7 +20,7 @@
 }
 
 .card-text {
-  line-height: 10px;
+  line-height: 1.6;
   color: #263238;
 }
 
@@ -26,4 +33,10 @@
   top: 50%;
   right: 10px;
   transform: translateY(-50%);
+}
+
+.card--image {
+  .card-block {
+    margin-left: 75px;
+  }
 }

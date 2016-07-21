@@ -9,25 +9,28 @@ function createMarkup(html) {
 
 export default (props) => {
   let image;
+  let cardClassName;
   if(props.card.icon == null || props.card.icon.length === 0) {
     image = null;
+    cardClassName = 'card card--text clearfix';
   } else {
     image = <img className="card-img" src={props.card.icon} alt="Card image cap"/>;
+    cardClassName = 'card card--image clearfix';
   }
 
   const action = _.first(props.card.ctas);
 
   return (
     <a
-      className="card clearfix"
+      className={cardClassName}
       href={action.href}
       data-event-action="click"
       data-event-category={props.url}
       data-event-label={action.href}>
-      <div className="pull-xs-left">
+      <div className="card-img-container">
         {image}
       </div>
-      <div className="card-block pull-xs-left">
+      <div className="card-block">
         <p
           className="card-text"
           dangerouslySetInnerHTML={createMarkup(props.card.description)}/>
