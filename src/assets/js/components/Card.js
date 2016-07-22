@@ -1,11 +1,6 @@
 import React from 'react';
 import _ from 'lodash';
-
-function createMarkup(html) {
-  return {
-    __html: html
-  };
-};
+import ReactMarkdown from 'react-markdown';
 
 export default (props) => {
   let image;
@@ -31,9 +26,7 @@ export default (props) => {
         {image}
       </div>
       <div className="card-block">
-        <p
-          className="card-text"
-          dangerouslySetInnerHTML={createMarkup(props.card.description)}/>
+        <ReactMarkdown className="card-text" source={props.card.description}/>
       </div>
       <img className="card-arrow" src="/assets/images/arrow.svg"/>
     </a>
